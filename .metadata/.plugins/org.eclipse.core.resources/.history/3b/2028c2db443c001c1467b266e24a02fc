@@ -1,0 +1,25 @@
+package service;
+import static db.JdbcUtil.*;
+
+import java.sql.Connection;
+
+import dao.BoardDAO;
+import vo.BoardVO;
+
+public class BoardUpdateFormService {
+
+	public BoardVO getUpdateArticle(int num) throws Exception {
+		// TODO Auto-generated method stub
+		
+		//-db작업하기 위해서 항상 하는 3줄 복사
+		Connection con = getConnection();
+	    BoardDAO boardDAO = BoardDAO.getInstance();
+	    boardDAO.setConnection(con);
+	    
+	    //-DAO쪽에서 게시판 글 등록할떄 처음에 등록했던 정보를 얻어오도록함
+	    BoardVO article = boardDAO.selectUpdateArticle(num); //-해당 num값을 가지고 있는 글 정보 하나를 select하는거
+	    close(con); //-db작업 끝났으니까 close
+		return article;
+	}
+
+}

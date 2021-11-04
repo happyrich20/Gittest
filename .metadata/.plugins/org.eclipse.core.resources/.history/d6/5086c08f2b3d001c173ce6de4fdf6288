@@ -1,0 +1,23 @@
+package service;
+import static db.JdbcUtil.*;
+
+import java.sql.Connection;
+
+import dao.DogDAO;
+import vo.DogVO;
+
+
+
+public class DogCartService {
+
+	public DogVO getCartDogVO(int id) {
+		// TODO Auto-generated method stub
+		Connection con = getConnection();
+	    DogDAO dogDAO = DogDAO.getInstance();
+	    dogDAO.setConnection(con);
+		
+		return null;
+	}
+
+
+}

@@ -1,0 +1,37 @@
+package service;
+
+import static db.JdbcUtil.commit;
+import static db.JdbcUtil.getConnection;
+import static db.JdbcUtil.rollback;
+
+import java.sql.Connection;
+
+import dao.BoardDAO;
+import vo.BoardVO;
+
+public class UpdateFormService {
+
+	   public boolean registArticle(BoardVO boardVO) throws Exception {
+	      // TODO Auto-generated method stub
+	      boolean registSuccess = false;
+	      Connection con = getConnection();
+	      BoardDAO boardDAO = BoardDAO.getInstance();
+	      boardDAO.setConnection(con);
+	      
+	      int insertCount = boardDAO.insertArticle(boardVO);
+	      if(insertCount > 0) {
+	         registSuccess = true;
+	         commit(con);
+	      }
+	      else {
+	         rollback(con);
+	      }
+	      
+	      return registSuccess;
+	   }
+
+	public BoardVO getArticle(int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action = "formPost" method="POST">
+		<label for = "name">이름 : </label>
+		<input type = "text" name = "name" id = "name" required="required" placeholder="이름"><br>
+		<label for = "temperature">온도 : </label>
+		<input type = "range" name = "temperature" id = "temperature" min = "1" max = "100"><br>
+		<label for = "age">나이 : </label>
+		<input type = "number" name = "age" id = "age" min = "1" max = "100"><br>
+		<label for = "email">이메일 : </label>
+		<input type = "text" name = "email" id = "email"><br>
+		<label for = "color">색상 : </label>
+		<input type = "color" name = "color" id = "color"><br>
+		<label for = "homepage">홈페이지 : </label>
+		<input type = "url" name = "homepage" id = "homepage"><br>
+		<label for = "birthday">생년월일 : </label>
+		<input type = "date" name = "Birthday" id = "birthday"><br>
+		<label for = "job">직업 : </label>
+		<input type = "text" name = "job" id = "job" list = "joblist"><br>
+		<label for = "boardType">게시판종류 : </label>
+		<input type = "hidden" name = "boardType" id = "boardType" value = "1"><br>
+		<datalist id = "joblist">
+			<option>교수</option>
+			<option>가수</option>
+			<option>유튜버</option>
+			<option>댄서</option>
+			<option>1타강사</option>			
+		</datalist>
+		<label for = "gender1">성별 : </label>
+		<input type = "radio" name = "gender" id = "gender1" value = "M" checked="checked">남자
+		<input type = "radio" name = "gender" id = "gender2" value = "F">여자
+		<br>
+		<label for = "memo">메모 : </label>
+		<textarea rows="15" cols="40" name = "memo" id = "memo"></textarea>
+		<br>
+		<input type = "button" value = "일반버튼" onclick="alert('경고')"/>
+		<input type = "reset" value = "취소"/>
+		<input type = "image" src = "bonobono.jpg"/>
+		<input type = "submit" value = "전송"/>
+		
+	</form>
+</body>
+</html>

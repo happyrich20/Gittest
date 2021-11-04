@@ -1,0 +1,24 @@
+package action;
+
+import service.BoardUpdateService;
+import vo.ActionForward;
+import vo.BoardVO;
+
+public class BoardDeleteFormAction {
+	 System.out.println("action");
+     int num = Integer.parseInt(request.getParameter("num"));
+     String pageNum = request.getParameter("pageNum");
+     
+     BoardUpdateService boardUpdateService = new BoardUpdateService(); 
+     BoardVO artcticle =  boardUpdateService.getArtcticle(num);
+     
+     request.setAttribute("article", artcticle);
+     request.setAttribute("pageNum", pageNum);
+     
+     ActionForward forward = new ActionForward();
+     forward.setUrl("board/updateForm.jsp");
+     
+     
+     
+     return forward;
+}

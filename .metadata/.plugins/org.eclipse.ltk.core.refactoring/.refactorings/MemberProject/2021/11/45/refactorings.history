@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;boardProject/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;MemberProject&apos;&#x0D;&#x0A;- Destination element: &apos;boardProject/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MemberProject/src/main/java/dao&#x0D;&#x0A;     MemberProject/src/main/java/vo&#x0D;&#x0A;     MemberProject/src/main/java/db&#x0D;&#x0A;     MemberProject/src/main/java/action" description="Copy packages" destination="=boardProject/src\/main\/java" element1="/src\/main\/java&lt;dao" element2="/src\/main\/java&lt;vo" element3="/src\/main\/java&lt;db" element4="/src\/main\/java&lt;action" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1635730003725" version="1.0"/>
+</session>

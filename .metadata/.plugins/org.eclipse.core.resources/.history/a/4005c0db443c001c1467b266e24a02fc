@@ -1,0 +1,30 @@
+package action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import service.BoardUpdateFormService;
+import vo.ActionForward;
+import vo.BoardVO;
+
+public class BoardUpdateFormAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		int num = Integer.parseInt(request.getParameter("num")); //-num값을 String으로 받아서 int로 변환
+		String pageNum = request.getParameter("pageNum");
+		
+		BoardUpdateFormService boardUpdateFormService = new BoardUpdateFormService();
+		
+		BoardVO article = boardUpdateFormService.getUpdateArticle(num); //-수정할 대상이 되는 글의 정보 가져오기. 해당 번호 글을 알수있도록 num값
+		request.setAttribute("article", article);
+		request.setAttribute("pageNum", pageNum);
+		//-pageNum이라는 이름으로 pageNum 공유. 글 수정처리가 끝난 다음에 목록보기로 되돌아갈떄 원래보던 페이지로 되돌아가야 되기 때문에 보던 페이지번호를 알고 있어야.
+		
+		ActionForward forward = new ActionForward();
+		forward.setUrl("board/updateForm.jsp");
+		return forward; //-포워딩정보를 리턴
+	}
+
+}

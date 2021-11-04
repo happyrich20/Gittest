@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="C:\jspStudy\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\dog2" path="/dog2" reloadable="true" source="org.eclipse.jst.jee.server:dog2">
+   <Resource auth="Container" dirverClassName="oracle.jdbc.driver.OracleDriver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" name="jdbc/jsptest" password="java" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="java"/>
+</Context>
